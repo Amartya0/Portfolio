@@ -1,0 +1,210 @@
+.h404 {
+	font-size: 16rem;
+	display: flex;
+	align-items: center;
+	span {
+		position: relative;
+		z-index: 0;
+		width: 13rem;
+		height: 13rem;
+		border-radius: 50%;
+		overflow: hidden;
+		div {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			background: rgba(0, 0, 0, 0.500);
+			z-index: 2;
+			animation: shadow 2s linear;
+		}
+	}
+	img {
+		position: absolute;
+		width: 13rem;
+		aspect-ratio: 1/1;
+		z-index: 1;
+	}
+	.sat {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 3;
+		top: 0;
+		left: 0;
+		animation: sat-plane 120s linear infinite;
+		span {
+			position: absolute;
+			width: 2rem;
+			height: 2rem;
+			top: -100%;
+			left: -100%;
+			animation: sat 6s linear infinite, sat-plane 24s linear infinite;
+			animation-delay: 2s;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+@keyframes shadow {
+	from {
+		left: -100%;
+	}
+	to {
+		left: 0%;
+	}
+}
+
+@keyframes sat {
+	0% {
+		top: -2rem;
+		left: -2rem;
+	}
+	50% {
+		top: calc(100% + 2rem);
+		left: calc(100% + 2rem);
+	}
+	100% {
+		top: calc(100% + 2rem);
+		left: calc(100% + 2rem);
+	}
+}
+
+@keyframes sat-plane {
+	0% {
+		transform: rotateZ(0deg);
+	}
+	100% {
+		transform: rotateZ(360deg);
+	}
+}
+
+.main {
+	width: 100%;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: url("/images/earth.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	h4 {
+		font-size: 1.3rem;
+	}
+	a {
+		margin-top: 2rem;
+		font-size: 2rem;
+		position: relative;
+		background: #ff5f6d;
+		background: -webkit-linear-gradient(to right, #ffc371, #ff5f6d);
+		background: linear-gradient(to right, #ffc371, #ff5f6d);
+		z-index: 0;
+		padding: 1rem;
+		&::before {
+			position: absolute;
+			content: '';
+			display: block;
+			width: calc(100% - 0.6rem);
+			height: calc(100% - 0.6rem);
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: #262a2b;
+			z-index: 1;
+		}
+		&::after {
+			position: absolute;
+			content: 'Homepage';
+			display: block;
+			background: #ff5f6d;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: -webkit-linear-gradient(to right, #ffc371, #ff5f6d);
+			background: linear-gradient(to right, #ffc371, #ff5f6d);
+			background-clip: text;
+			color: transparent;
+			font-weight: bolder;
+			z-index: 2;
+		}
+		&:hover,
+		&:active,
+		&:focus {
+			&::before {
+				position: absolute;
+				content: '';
+				display: block;
+				width: 100%;
+				height: 100%;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background: #ff5f6d;
+				background: -webkit-linear-gradient(to right, #ffc371, #ff5f6d);
+				background: linear-gradient(to right, #ffc371, #ff5f6d);
+				z-index: 1;
+			}
+			&::after {
+				position: absolute;
+				content: 'Homepage';
+				display: block;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				color: #262a2b;
+				font-weight: bolder;
+				z-index: 2;
+			}
+		}
+	}
+}
+
+.container {
+	width: 100%;
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: 100%;
+	grid-template-columns: 100%;
+	background: #060608;
+	position: relative;
+}
+
+.footer {
+	width: fit-content;
+	position: absolute;
+	bottom: 0;
+	color: #1f1f1f;
+	font-weight: bold;
+	left: 50%;
+	padding-bottom: 0.5rem;
+	transform: translateX(-50%);
+	backdrop-filter: blur(5px);
+}
+
+@media screen and (max-width: 768px) {
+	.h404 {
+		font-size: 5rem;
+		span {
+			width: 5rem;
+			height: 5rem;
+		}
+		img {
+			width: 5rem;
+		}
+		.sat {
+			span {
+				width: 1.5rem;
+				height: 1.5rem;
+			}
+		}
+	}
+	.main {
+		h4 {
+			text-align: center;
+		}
+	}
+}
