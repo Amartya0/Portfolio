@@ -1,13 +1,12 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Footer from '../components/Footer/Footer';
 import styles from '../styles/Home.module.scss';
 import Gravatar from 'react-gravatar';
-import Social48pxGlyph1_logoFbSimple from '../components/icons/social-48px-glyph-1_logo-fb-simple';
-import Social48pxGlyph1_logoInstagram from '../components/icons/social-48px-glyph-1_logo-instagram';
-import Social48pxGlyph1_logoGithub from '../components/icons/social-48px-glyph-1_logo-github';
-import Social48pxGlyph1_logoLinkedIn from '../components/icons/social-48px-glyph-1_logo-linkedin';
-import Social48pxGlyph1_logoTwitter from '../components/icons/social-48px-glyph-1_logo-twitter';
+import Social48pxGlyph1_logoFbSimple from '../components/Icons/social-48px-glyph-1_logo-fb-simple';
+import Social48pxGlyph1_logoInstagram from '../components/Icons/social-48px-glyph-1_logo-instagram';
+import Social48pxGlyph1_logoGithub from '../components/Icons/social-48px-glyph-1_logo-github';
+import Social48pxGlyph1_logoLinkedIn from '../components/Icons/social-48px-glyph-1_logo-linkedin';
+import Social48pxGlyph1_logoTwitter from '../components/Icons/social-48px-glyph-1_logo-twitter';
 import Navbar from '../components/Navbar/Navbar';
 
 export default function Home() {
