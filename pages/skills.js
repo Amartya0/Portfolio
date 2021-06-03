@@ -9,7 +9,7 @@ export default function Works() {
 			<Head>
 				<title>Oops! Page Not Found | Aniket Datta</title>
 				<meta name="description" content="Hey I am Amartya Jash." />
-				<link rel="icon" href="/images/favicon.ico" />
+				<link rel="icon" href="/images/logo.jpg" />
 			</Head>
 			<div className={s.inner}>
 				<header className={s.header}>
