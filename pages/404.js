@@ -9,7 +9,7 @@ export default function PageNotFound() {
 			<Head>
 				<title>Oops! Page Not Found | Amartya Jash</title>
 				<meta name="description" content="Hey I am Amartya Jash." />
-				<link rel="icon" href="/images/favicon.ico" />
+				<link rel="icon" href="/images/logo.jpg" />
 			</Head>
 			<div className={s.main}>
 				<h1 className={s.h404}>

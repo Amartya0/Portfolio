@@ -15,7 +15,7 @@ export default function Home() {
 			<Head>
 				<title>Amartya Jash 😎 | Creative Dev</title>
 				<meta name="description" content="Hey I am Amartya Jash." />
-				<link rel="icon" href="/images/favicon.ico" />
+				<link rel="icon" href="/images/logo.jpg" />
 			</Head>
 			<Navbar />
 			<main className={styles.main}>
